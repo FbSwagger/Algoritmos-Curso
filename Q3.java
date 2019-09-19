@@ -8,7 +8,8 @@ public class Q3 {
 		//q2();
 		//q4();
 		//q5();
-		q6();
+		//q6();
+		q7();
 		}
 	static void q3(){
 		String nome;
@@ -125,5 +126,38 @@ public class Q3 {
 		
 		valorFim = ((valorDepo + valorDepo * 0.005)* 0.993);
 		System.out.println("Rendimento final:"+ (valorFim - valorDepo));
+	}
+	
+	static void q7() {
+		/*A	Loja Mamão com Açúcar está vendendo	seus produtos
+		 * 	em 5 (cinco) prestações	sem	juros. Faça	um algoritmo
+		 * 	que	receba um valor	de uma compra e	mostre o valor das prestações.*/
+		
+		double valorDeCompra;
+		int opt;
+		
+		Scanner novo = new Scanner(System.in);
+		System.out.println("Mamão [1]:");
+		System.out.println("Açucar [2]:");
+		System.out.println("Sair [0]:");
+		opt = novo.nextInt();
+		
+		switch (opt) {
+		case 1:	
+			System.out.println("Quantia em reais:");
+			valorDeCompra = novo.nextDouble();
+			System.out.println("Prestações:"+ (valorDeCompra / 5));
+			System.out.println((valorDeCompra)+ " de mamão na mão");
+			break;
+		case 2:
+			System.out.println("Quantia em reais :");
+			valorDeCompra = novo.nextDouble();
+			System.out.println("Prestações:"+ (valorDeCompra / 5));
+			System.out.println((valorDeCompra)+ " de açucar na mão");
+			break;
+		case 0:
+			System.out.println("Obrigado pela presença!!");
+			break;
+		}	
 	}
 }
