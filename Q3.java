@@ -7,8 +7,9 @@ public class Q3 {
 		//q1();
 		//q2();
 		//q4();
-		q5();
-	}
+		//q5();
+		q6();
+		}
 	static void q3(){
 		String nome;
 		double salarioFixo;
@@ -103,5 +104,26 @@ public class Q3 {
 		quantReais = novo.nextDouble();
 		
 		System.out.println("Sua quantidade de dólares:"+ (quantReais / cotaDolar));
+	}
+	
+	static void q6() {
+		/*Escreva um algoritmo que receba um
+		 * 	valor que foi depositado em	uma	conta
+		 * 	poupança e exiba o valor com rendimento
+		 * 	após um	mês. Considere fixo	o juro da conta
+		 * 	poupança em	0,70% a.m
+		 * */
+		
+		/*PS...poupança 0.5% a.m...PS*/
+		
+		double valorDepo;
+		double valorFim;
+		
+		Scanner novo = new Scanner(System.in);
+		System.out.println("Valor depositado:");
+		valorDepo = novo.nextDouble();
+		
+		valorFim = ((valorDepo + valorDepo * 0.005)* 0.993);
+		System.out.println("Rendimento final:"+ (valorFim - valorDepo));
 	}
 }
