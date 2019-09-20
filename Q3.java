@@ -9,7 +9,13 @@ public class Q3 {
 		//q4();
 		//q5();
 		//q6();
-		q7();
+		//q7();
+		//q8();
+		//q9();
+		//q10();
+		//q11();
+		//q12();
+		q15();
 		}
 	static void q3(){
 		String nome;
@@ -159,5 +165,116 @@ public class Q3 {
 			System.out.println("Obrigado pela presença!!");
 			break;
 		}	
+	}
+	
+	static void q8() {
+		/*Faça um algoritmo	que	receba o preço de custo	de um produto e	mostre
+		 * 	o valor	de	venda. Sabe-se que o preço de custo receberá	
+		 * um acréscimo	de acordo com um percentual	informado pelo usuário.	
+		 */
+		
+		Scanner novo = new Scanner(System.in);
+		double pCusto;
+		double acrecimo;
+		
+		System.out.println("Informe o preço de custo:");
+		pCusto = novo.nextDouble();
+		System.out.println("Informe a porcentagem de acrécimo:");
+		acrecimo = novo.nextDouble();
+		
+		System.out.println("Valor de venda:"+ ((pCusto * acrecimo)/100));	
+	}
+	
+	static void q9() {
+		/*O	custo ao consumidor	de	um	carro	novo é a soma do custo	de	fábrica	com	a	
+		 * percentagem	do	distribuidor e dos impostos	(aplicados,	primeiro os	impostos	
+		 * sobre o	custo de fábrica, e	depois	a percentagem do distribuidor sobre	o resultado).	
+		 * Supondo	que	a percentagem do distribuidor seja	de	28%	e os impostos 45%. Escrever
+		 * 	um	algoritmo que leia o custo	de	
+		 * fábrica de um carro	e informe o	custo ao consumidor	do mesmo.
+		 */
+		Scanner novo = new Scanner(System.in);
+		double custoDeFabrica;
+		double custoComImposto;
+		
+		System.out.println("Custo de fábrica: ");
+		custoDeFabrica = novo.nextDouble();
+		
+		custoComImposto =  + custoDeFabrica + (custoDeFabrica * 0.45);
+		
+		System.out.println("Custo ao consumidor:"+ (custoComImposto + (custoComImposto *0.28)));
+	}
+	
+	static void q10(){
+		/* Escreva um algoritmo	que	armazene o valor 10	em uma variável
+		 * 	A e	o valor	20 em uma variável	B. A seguir	(utilizando	apenas atribuições entre variáveis)
+		 * 	troque os seus conteúdos fazendo com que o valor que está em A passe para B	e vice-versa.	
+		 *  Ao final, escrever os valores que ficaram armazenados nas variáveis.
+		 */
+		Scanner novo = new Scanner(System.in);
+		int A = 10;
+		int B = 20;
+		int aux;
+		
+		aux = A;
+		A = B;
+		B = aux;
+		
+		System.out.println("Valor A:" + (A)+ " Valor B:"+ (B));
+	}
+	
+	static void q11() {
+		/*Analise os algoritmos a baixo e diga o que será impresso na tela ao serem executados*/
+		
+		System.out.println("A) vai ser impresso 120, 100 e 234.");
+		System.out.println("B) vai ser impresso 500, 140, 500, 300, 140 e 440.");
+		System.out.println("C) vai ser impresso 34, 67 e 79.");
+		System.out.println("D) vai dar erro porque Z não recebeu nada.");
+	}
+	
+	static void q12() {
+		/**/
+		
+		System.out.println("Apenas a 1 - [A] tem resultados iguais!");
+	}
+	
+	static void q13(){
+		/**a - 6*5
+		 * b - 2+30
+		 * c -  fala
+		 * d - sério
+		 * e - essa
+		 * f - questão
+		 * g - meu
+		 * h - Deus
+		 **/
+	}
+	
+	static void q14(){
+	/* Escreva um algoritmo para ler um valor (do teclado) e escrever (na tela) o seu antecessor e seu sucessor*/
+		
+		double num;
+		
+		Scanner novo = new Scanner(System.in);
+		System.out.println("Digite um número:");
+		num = novo.nextDouble();
+		
+		System.out.println("Antecessor:"+ (num - 1)+ "Sucessor:"+ (num + 1));
+	}
+	
+	static void q15() {
+		/* Escreva um algoritmo para ler as dimensões de um retângulo (base e altura), calcular e escrever a área do retângulo*/
+		
+		double base;
+		double altura;
+		
+		Scanner novo = new Scanner(System.in);
+		
+		System.out.println("informe a base do retângulo em metros:");
+		base = novo.nextDouble();
+		System.out.println("informe a altura do retângulo em metros:");
+		altura = novo.nextDouble();
+		
+		System.out.println("A área do retângulo é:"+ (base * altura)+ " m²");
 	}
 }
