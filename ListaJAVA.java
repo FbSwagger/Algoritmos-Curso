@@ -1,6 +1,6 @@
 import java.util.Scanner; 
 
-public class Q3 {
+public class ListaJAVA {
 	
 	public static void main(String[] args) {
 		//q3();
