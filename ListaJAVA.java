@@ -30,15 +30,41 @@ public class ListaJAVA {
 		//q25();
 		//q26();
 		//q27();
-		q28();
+		//q28();
+		//q29();
+		//q30();
+		//q31();
+		//q32();
+		//q33();
+		//q34();
+		//q35();
+		//q36();
+		//q37();
+		//q38();
+		//q39();
+		//q40();
+		//q41();
+		//q42();
+		//q43();
+		//q44();
+		//q45();
+		//q46();
+		//q47();
+		//q48();
+		q49();
+		//q50();
+		//q51();
+		//q52();
+		//q53();
+		//q54();
+		//q55();
 		}
 	static void q3(){
+		Scanner novo = new Scanner(System.in);
 		String nome;
 		double salarioFixo;
 		double totalDeVendas;
 		double salarioFinal;
-		
-		Scanner novo = new Scanner(System.in);
 		
 		System.out.println("Digita o nome ai campeão");
 		nome = novo.next();
@@ -530,11 +556,637 @@ public class ListaJAVA {
 			System.out.println("O jogo teve "+hora+" horas de duração");
 		}
 	}
+	
+		static void q29() {
+ 		Scanner novo = new Scanner(System.in);
+ 		Double salarioPorHora, horaPorSemana, numHorasMes, horasExtras;
+ 		System.out.println("Digite o numero de horas que vc trabalhou no mes: ");
+ 		numHorasMes = novo.nextDouble();
+ 		System.out.println("Digite seu salario por hora: ");
+ 		salarioPorHora = novo.nextDouble();
+ 		horaPorSemana = (numHorasMes / 4);
+ 		horasExtras = numHorasMes - 160;
+ 		
+ 		if(horaPorSemana > 40) {
+ 			System.out.println("O salario no final do mes é " + ((salarioPorHora*160) + (horasExtras*0.50)*salarioPorHora));	
+ 		}else {
+ 			System.out.println("O salario no final do mes é " + (salarioPorHora * numHorasMes));
+ 		}
+ 	}
+
+		static void q30() {
+		Scanner novo = new Scanner(System.in);
+		String nome;
+		Double alturaCm, alturaM, pesoIdeal;
+		int sexo = 0;
+		
+		System.out.println("Digite seu nome: ");
+		nome = novo.next();
+		System.out.println("Digite sua altura em centimetros: ");
+		alturaCm = novo.nextDouble();
+		alturaM = alturaCm/100;
+		
+		while ((sexo != 1) || (sexo != 2)) {
+			System.out.println("Digite seu sexo (1) masculino ou (2) feminino: ");
+			sexo = novo.nextInt();
+			if(sexo == 1) {
+				pesoIdeal = ((72.7*alturaM) - 58);
+				System.out.println("Seu peso ideal é: " + pesoIdeal);
+				break;
+			}else if(sexo == 2) {
+				pesoIdeal = ((62.1 * alturaM) - 44.7);
+				System.out.println("Seu peso ideal é: " + pesoIdeal);
+				break;
+			}else {
+				System.out.println("opcao invalida!");
+			}
+		}
+		
+	}
+	
+	static void q31() {
+		Scanner novo = new Scanner(System.in);
+		int salarioF;
+		int totalVendas;
+
+		System.out.println("Digite seu salário fixo:");
+		salarioF = novo.nextInt();
+		System.out.println("Informe o valor das vendas efetuadas:");
+		totalVendas = novo.nextInt();
+
+		if(totalVendas > 1500)
+		System.out.println("Salario final:" + (totalVendas * 0.05) + salarioF);
+		else if(totalVendas <= 1500)
+		System.out.println("Salario final:" + (totalVendas * 0.03) + salarioF);
+
+
+	}
+
+		static void q32(){
+		Scanner novo = new Scanner(System.in);
+		int numeroConta;
+		double saldo;
+		double credito;
+		double debito;
+		double saldoAtual;
+
+		System.out.println("Informe o numero da conta:");
+		numeroConta = novo.nextInt();
+		System.out.println("Informe seu saldo:");
+		saldo = novo.nextDouble();
+		System.out.println("Informe se é  credito ou debito:");
+		credito = novo.nextInt();
+		debito = novo.nextInt();
+
+		saldoAtual = (saldo - debito) + credito;
+
+		System.out.println((saldoAtual >= 0) ? "Saldo positivo: "+ (saldoAtual): "Saldo negativo: "+(saldoAtual));	
+	}
+		public static void q33() {
+			Scanner novo = new Scanner(System.in);
+			Double quantidadeAtual, quantidadeMaxima, quantidadeMinima, quantidadeMedia;
+			System.out.println("Digite a quantidade atual em estoque: ");
+			quantidadeAtual = novo.nextDouble();
+			System.out.println("Digite a quantidade maxima em estoque: ");
+			quantidadeMaxima = novo.nextDouble();
+			System.out.println("Digite a quantidade minima em estoque: ");
+			quantidadeMinima = novo.nextDouble();
+			quantidadeMedia = ((quantidadeMinima + quantidadeMaxima) / 2);
+			
+			if(quantidadeAtual >= quantidadeMedia) {
+				System.out.println("Não efetuar compra!");
+			}else {
+				System.out.println("Efetuar compra!");
+			}
+		}
+	
+	
+		static void q34() {
+		Scanner novo = new Scanner(System.in);
+		int num;
+		System.out.println("Digite um numero: ");
+		num = novo.nextInt();
+		
+		if(num > 0) {
+			System.out.println("Positivo!");
+		}else if(num < 0) {
+			System.out.println("Negativo!");
+		}else {
+			System.out.println("Zero!");
+		}
+	}
+	
+		static void q35() {
+		Scanner novo = new Scanner(System.in);
+		int num1, num2, num3, numMaior;
+		System.out.println("Digite o primeiro numero: ");
+		num1 = novo.nextInt();
+		numMaior = num1;
+		do {
+			System.out.println("Digite o segundo numero: ");
+			num2 = novo.nextInt();
+		}while(num2 == num1);
+		if(num2 > numMaior) {
+			numMaior = num2;
+		}
+		do {
+			System.out.println("Digite o terceiro numero: ");
+			num3 = novo.nextInt();
+		}while(num3 == num1 || num3 == num2);
+		if(num3 > numMaior) {
+			numMaior = num3;
+		}
+		System.out.println("O numero maior é " + numMaior);
+	}
+		
+		static void q36() {
+			Scanner novo = new Scanner(System.in);
+			double valor1;
+			double valor2;
+			double valor3;
+			double soma;
+
+			System.out.println("Valor1:");
+			valor1 = novo.nextDouble();
+			System.out.println("Valor2:");
+			valor2 = novo.nextDouble();
+			System.out.println("Valor3:");
+			valor3 = novo.nextDouble();
+
+			if((valor1 < valor2)&( valor1 < valor3)){
+
+			soma = valor2 + valor3;
+			System.out.println("A soma dos dois maiores numeros e: "+ (soma));
+			}else if((valor2<valor1)&( valor2<valor3)){
+			soma = valor1 + valor3;
+			System.out.println("A soma dos dois maiores numeros e: "+ (soma));
+			}else {
+			soma = valor1 + valor2;
+			System.out.println("A soma dos dois maiores valores e: "+ soma);
+			}
+	}
+	
+		static void q37() {
+		Scanner novo = new Scanner(System.in);
+		double valor1;
+		double valor2;
+		double valor3;
+		double aux;
+		
+		System.out.println("Digite 3 valores:");
+		valor1 = novo.nextDouble();
+		valor2 = novo.nextDouble();
+		valor3 = novo.nextDouble();
+		
+		if(valor1 > valor2) {
+			aux = valor1;
+			valor1 = valor2;
+			valor2 = aux;
+			}
+			if(valor1 > valor3) {
+			aux = valor1;
+			valor1 = valor3;
+			valor3 = aux;
+			}
+			if(valor2 > valor3) {
+			aux = valor2;
+			valor2 = valor3;
+			valor3 = aux;
+			}
+			System.out.println("Ordem crescente"+(valor1)+(valor2)+(valor3));
+	}
+		static void q38() {
+		Scanner novo = new Scanner(System.in);
+		double a;
+		double b;
+		double c;
+		
+		System.out.println("Digite um valor para A, B e C:");
+		a = novo.nextDouble();
+		b = novo.nextDouble();
+		c = novo.nextDouble();
+		
+		if((a < b +c)||(b < a + c)||(c < a + b)) {
+			System.out.println("é triângulo!");
+		}else {
+			System.out.println("Não é um triângulo!");
+		}
+	}
+	
+		static void q39() {
+		Scanner novo = new Scanner(System.in);
+		String time1;
+		String time2;
+		int golsT1;
+		int golsT2;
+		
+		System.out.println("Digite o nome do 1° time:");
+		time1 = novo.next();
+		System.out.println("Digite o nome do 2° time:");
+		time2 = novo.next();
+		
+		System.out.println("Gols marcados pelo 1° time:");
+		golsT1 = novo.nextInt();
+		System.out.println("Gols marcados pelo 2° time:");
+		golsT2 = novo.nextInt();
+		
+		if(golsT1 == golsT2){
+			System.out.println("EMPATE!");
+		}else if(golsT1 > golsT2) {
+			System.out.println((time1)+ " venceu!");
+		}else {
+			System.out.println((time2)+ " venceu!");
+		}
+	}
+	
+		static void q40() {
+		Scanner novo = new Scanner(System.in);
+		int n1;
+		int n2;
+
+		System.out.println("Valor 1: ");
+		n1 = novo.nextInt();
+
+		System.out.println("Valor 2: ");
+		n2 = novo.nextInt();
+
+		if (n1 > n2) {
+			System.out.println("Primeiro é maior");
+		}
+		if (n2 == n1) {
+			System.out.println("Iguais");
+		}
+		if (n2 > n1) {
+			System.out.println("Segundo maior");
+		}
+	}
+
+		static void q41() {
+		Scanner novo = new Scanner(System.in);
+		int res;
+
+		System.out.print("Digite x: ");
+		int x = novo.nextInt();
+
+		System.out.print("Digite y: ");
+		int y = novo.nextInt();
+
+		int z = (x * y) + 5;
+
+		if (z <= 0) {
+			res = 'A';
+		} else if (z <= 100) {
+			res = 'B';
+		} else {
+			res = 'C';
+		}
+		System.out.println(z + ", " + res);
+	}
+
+		static void q42() {
+		Scanner novo = new Scanner(System.in);
+		double desconto;
+		int combustivel;
+		System.out.print("Número de Litros vendidos: ");
+		int litro = novo.nextInt();
+
+		System.out.print("Combustível [1]-A [2]-G: ");
+		combustivel = novo.nextInt();
+
+		if (litro <= 20 && combustivel == 2) {
+			desconto = 3.30 + (3.30 * 0.03);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro > 20 && combustivel == 2) {
+			desconto = 3.30 + (3.30 * 0.05);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro <= 20 && combustivel == 1) {
+			desconto = 2.90 + (2.90 * 0.04);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro > 20 && combustivel == 2) {
+			desconto = 2.90 + (2.90 * 0.06);
+			System.out.println("Desconto: " + desconto);
+		}
+	}
+
+		static void q43() {
+		Scanner novo = new Scanner(System.in);
+		int idadeH1;
+		int idadeH2;
+		int idadeM1;
+		int idadeM2;
+		int velhoH;
+		int velhoM;
+		int novoH;
+		int novoM;
+
+		System.out.print("Idade Homem 1: ");
+		idadeH1 = novo.nextInt();
+
+		do {
+			System.out.print("Idade Homem 2: ");
+			idadeH2 = novo.nextInt();
+		} while (idadeH1 == idadeH2);
+		if (idadeH1 > idadeH2) {
+			velhoH = idadeH1;
+			novoH = idadeH2;
+		} else {
+			velhoH = idadeH2;
+			novoH = idadeH1;
+		}
+		System.out.print("Idade Mulher 1: ");
+		idadeM1 = novo.nextInt();
+
+		do {
+			System.out.print("Idade Mulher 2: ");
+			idadeM2 = novo.nextInt();
+		} while (idadeM1 == idadeM2);
+		if (idadeM1 > idadeM2) {
+			velhoM = idadeM1;
+			novoM = idadeM2;
+		} else {
+			velhoM = idadeM2;
+			novoM = idadeM1;
+		}
+		System.out.println("Soma 1: " + (velhoH + novoM));
+		System.out.println("Soma 2: " + (novoH + velhoM));
+	}
+
+		static void q44() {
+		Scanner novo = new Scanner(System.in);
+		double precoMa = 1.80;
+		double precoMo = 2.50;
+		double pesoMa;
+		double pesoMo;
+		double totalMo;
+		double totalMa;
+		double precoFinal;
+
+		System.out.print("Quantos Kilos de morango: ");
+		pesoMo = novo.nextDouble();
+
+		System.out.print("Quantos Kilos de maçã: ");
+		pesoMa = novo.nextDouble();
+
+		if (pesoMo > 5) {
+			totalMo = (precoMo - 0.3) * pesoMo;
+		} else {
+			totalMo = precoMo * pesoMo;
+		}
+
+		if (pesoMa > 5) {
+			totalMa = (precoMa - 0.3) * pesoMa;
+		} else {
+			totalMa = precoMa * pesoMa;
+		}
+		if ((totalMo + totalMa) > 25 || (pesoMo + pesoMa) > 8) {
+			precoFinal = (totalMo + totalMa) * 0.9;
+		} else {
+			precoFinal = totalMo + totalMa;
+		}
+
+		System.out.println("Preço finl da compra: R$" + precoFinal);
+	}
+
+		static void q45() {
+		Scanner novo = new Scanner(System.in);
+		int usu;
+		int senha;
+		int cont = 0;
+
+		do {
+			if (cont > 0)
+				System.out.println("USUARIO INVALIDO !!!");
+			System.out.print("Usuario: ");
+			usu = novo.nextInt();
+			cont++;
+		} while (usu != 1234);
+		cont = 0;
+		do {
+			if (cont > 0)
+				System.out.println("SENHA INVALIDA !!!");
+			System.out.print("Senha: ");
+			senha = novo.nextInt();
+			cont++;
+		} while (senha != 9999);
+		System.out.println("ACESSO PERMITIDO !!!");
+	}
+
+		static void q46() {
+		System.out.println("VERDADEIRO\nFALSO\nFALSO");
+	}
+	
+		static void q47() {
+		Scanner novo = new Scanner(System.in);
+		double descMenor5 = 0.02;
+		double descMenor10 = 0.03;
+		double descMaior10 = 0.05;
+		String produto;
+		int quantidade;
+		double preco;
+		double total;
+		double descont = 0;
+
+		System.out.println("Nome do produto: ");
+		produto = novo.nextLine();
+		System.out.println("Quantidade: ");
+		quantidade = novo.nextInt();
+		System.out.println("Preço Unitario: ");
+		preco = novo.nextDouble();
+
+		total = quantidade * preco;
+
+		if (quantidade <= 5) {
+			descont = total * descMenor5;
+		}
+		if (quantidade > 5 && quantidade <= 10) {
+			descont = total * descMenor10;
+		}
+		if (quantidade > 10) {
+			descont = total * descMaior10;
+		}
+		System.out.println("Produto: " + produto);
+		System.out.println("Preço unitário: " + preco);
+		System.out.println("Total: " + total);
+		System.out.println("Desconto: " + descont);
+		System.out.println("Total a pagar: " + (total - descont));
+
+	}
+
+		static void q48() {
+		Scanner novo = new Scanner(System.in);
+		int ano = 2011;
+
+		System.out.println("Entre com seu codigo: ");
+		int codigo = novo.nextInt();
+
+		System.out.println("Entre com a data de nascimento: ");
+		int data = novo.nextInt();
+
+		System.out.println("Entre com o Ano de ingresso na empresa: ");
+		int tempo = novo.nextInt();
+
+		if (ano - data >= 16) {
+			if (ano - data >= 65) {
+				System.out.println("Requer Aposentadoria");
+			} else {
+				if (ano - tempo >= 30) {
+					System.out.println("Requer Aposentadoria");
+				} else {
+					if ((ano - data >= 60) && (ano - tempo >= 25)) {
+						System.out.println("Requer Aposentadoria");
+					} else {
+						System.out.println("NÃO Requer Aposentadoria");
+					}
+				}
+			}
+		} else {
+			System.out.println("Você não tem idade para trabalhar");
+		}
+	}
+		static void q49() {
+			Scanner novo = new Scanner(System.in);
+			double a;
+			double b;
+			double c;
+			String mens;
+			
+			System.out.println("Informe os lados do triângulo:");
+			a = novo.nextDouble();
+			b = novo.nextDouble();
+			c = novo.nextDouble();
+			
+			if((a < b + c)&(b < a + c)&(c < a + b)) {
+				if((a==b)&(b==c)) {
+					mens = "triângulo equilátero";
+				}else if((a==b)||(b==c)||(a==c)){
+					mens = "Triângulo isóseles";
+				}else {
+					mens = "Triângulo escaleno";
+				}
+			}else {
+				mens = "Não é possível formar um triângulo";
+			}
+			System.out.println(mens);
+			
+			System.out.println("*****RESPOSTAS*****");
+			System.out.println("Não é possível formar um triângulo");
+			System.out.println("Triângulo escaleno");
+			System.out.println("Triângulo isóseles");
+			System.out.println("Triângulo equilátero");
+			System.out.println("Triângulo isóseles");
+		}
+
+		static void q50() {
+		Scanner novo = new Scanner(System.in);
+		System.out.print("Digite: ");
+		double n1 = novo.nextInt();
+		double n2;
+		do {
+			System.out.print("Digite: ");
+			n2 = novo.nextInt();
+		} while (n2 == 0);
+
+		System.out.println(n1 + " / " + n2 + " = " + (n1 / n2));
+	}
+	
+		static void q51() {
+		Scanner novo = new Scanner(System.in);
+		System.out.print("Digite: ");
+		double n1 = novo.nextInt();
+		double n2;
+		do {
+			System.out.print("Digite: ");
+			n2 = novo.nextInt();
+		} while (n2 == 0);
+
+		System.out.println(n1 + " / " + n2 + " = " + (n1 / n2));
+	}
+
+		static void q52() {
+		Scanner novo = new Scanner(System.in);
+		int res;
+
+		System.out.print("Digite x: ");
+		int x = novo.nextInt();
+		int y;
+		do {
+			System.out.print("Digite y: ");
+			y = novo.nextInt();
+
+		} while (y == 0);
+		int z = (x * y) + 5;
+
+		if (z <= 0) {
+			res = 'A';
+		} else if (z <= 100) {
+			res = 'B';
+		} else {
+			res = 'C';
+		}
+		System.out.println(z + ", " + res);
+	}
+	
+		static void q53() {
+		Scanner novo = new Scanner(System.in);
+		double desconto;
+		int combustivel;
+		System.out.print("Número de Litros vendidos: ");
+		int litro = novo.nextInt();
+
+		System.out.print("Combustível [1]-A [2]-G: ");
+		combustivel = novo.nextInt();
+
+		if (litro <= 20 && combustivel == 2) {
+			desconto = 3.30 + (3.30 * 0.03);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro > 20 && combustivel == 2) {
+			desconto = 3.30 + (3.30 * 0.05);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro <= 20 && combustivel == 1) {
+			desconto = 2.90 + (2.90 * 0.04);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro > 20 && combustivel == 2) {
+			desconto = 2.90 + (2.90 * 0.06);
+			System.out.println("Desconto: " + desconto);
+		}
+	}
+
+		static void q54() {
+		Scanner novo = new Scanner(System.in);
+		double nota1;
+		double nota2;
+		do{
+			System.out.println("Nota 1: ");
+			nota1 = novo.nextDouble();
+			System.out.println("Nota 2: ");
+			nota2 = novo.nextDouble();
+		}while(nota1 < 0 || nota2 < 0 || nota1 > 10 || nota2 > 10);
+		
+		System.out.println("Média Simples: "+(nota1+nota2)/2);	
+		
+	}
+		static void q55() {
+		Scanner novo = new Scanner(System.in);
+		
+		int usu;
+		int senha;
+		int cont = 0;
+
+		do {
+			if (cont > 0)
+				System.out.println("USUARIO INVALIDO !!!");
+			System.out.print("Usuario: ");
+			usu = novo.nextInt();
+			cont++;
+		} while (usu != 1234);
+		cont = 0;
+		do {
+			if (cont > 0)
+				System.out.println("SENHA INVALIDA !!!");
+			System.out.print("Senha: ");
+			senha = novo.nextInt();
+			cont++;
+		} while (senha != 9999);
+		System.out.println("ACESSO PERMITIDO !!!");
+	}
 }
-
-
-
-
-
-
-
